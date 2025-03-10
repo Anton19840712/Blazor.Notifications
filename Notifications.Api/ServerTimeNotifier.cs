@@ -26,7 +26,7 @@ public class ServerTimeNotifier : BackgroundService
             _logger.LogInformation("Executing {Service} {Time}", nameof(ServerTimeNotifier), dateTime);
 
             await _context.Clients
-                .User("f45fe475-8466-484f-af69-a2658a8ee915")
+                .User("testuser")
                 .ReceiveNotification($"Server time = {dateTime}");
         }
     }
